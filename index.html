@@ -3,167 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NovaServe | Premium Affiliate Solutions</title>
+    <meta name="description" content="Enter to win free gift cards from Amazon, Walmart, Visa, Target and Starbucks. No purchase necessary. Claim your chance to win up to $500!">
+    <meta property="og:title" content="Win Free Gift Cards - Amazon, Walmart, Visa & More!">
+    <meta property="og:description" content="Enter our sweepstakes for a chance to win free gift cards from top brands. No purchase needed.">
+    <meta property="og:type" content="website">
+    <title>Win Free Gift Cards – Amazon, Walmart, Visa & More!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         :root {
-            --primary: #0c1220;
-            --secondary: #16213e;
-            --accent: #3a86ff;
-            --accent2: #ff006e;
-            --accent3: #ffbe0b;
-            --accent4: #fb5607;
-            --accent5: #8338ec;
-            --highlight: #38bdf8;
-            --text: #f0f9ff;
-            --light: #94a3b8;
-            --gradient: linear-gradient(135deg, var(--accent), var(--accent5));
-            --gradient2: linear-gradient(135deg, var(--accent2), var(--accent3));
-            --glass: rgba(22, 33, 62, 0.7);
-            --glass-border: rgba(255, 255, 255, 0.15);
+            --midnight-navy: #1B2951;
+            --champagne-gold: #D4AF37;
+            --deep-burgundy: #722F37;
+            --forest-emerald: #355E3B;
+            --royal-indigo: #4B0082;
+            --rose-gold: #E8B4B8;
+            --charcoal-black: #36454F;
+            --pearl-white: #F8F6F0;
+            --copper-bronze: #B87333;
+            --shadow: rgba(0, 0, 0, 0.15);
+            --transition: all 0.3s ease;
+            --transition-slow: all 0.5s ease;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: var(--text);
-            overflow-x: hidden;
-            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: var(--charcoal-black);
+            background: linear-gradient(135deg, var(--pearl-white) 0%, #f9f9f9 100%);
             line-height: 1.6;
+            overflow-x: hidden;
         }
-        
-        .particle-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            overflow: hidden;
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            margin-bottom: 1rem;
         }
-        
-        .particle {
-            position: absolute;
-            border-radius: 50%;
-            background: var(--highlight);
-            opacity: 0.3;
-            animation: floatParticle linear infinite;
-        }
-        
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 30px;
-        }
-        
-        /* Header Styles */
-        header {
-            background: rgba(12, 18, 32, 0.95);
-            backdrop-filter: blur(10px);
-            position: fixed;
-            width: 100%;
-            z-index: 1000;
-            border-bottom: 1px solid var(--glass-border);
-            padding: 15px 0;
-            transition: all 0.4s ease;
-        }
-        
-        header.scrolled {
-            padding: 10px 0;
-            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
-        }
-        
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-        
-        .logo h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 32px;
-            font-weight: 800;
-            background: var(--gradient);
+
+        h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--midnight-navy) 0%, var(--royal-indigo) 100%);
             -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            letter-spacing: 1px;
+            -webkit-text-fill-color: transparent;
         }
-        
-        .logo-icon {
-            font-size: 28px;
-            color: var(--accent);
-            animation: pulse 2s infinite ease-in-out;
+
+        h2 {
+            font-size: 2.5rem;
+            background: linear-gradient(135deg, var(--deep-burgundy) 0%, var(--rose-gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
-        
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 35px;
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
         }
-        
-        nav a {
-            color: var(--text);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 17px;
-            position: relative;
-            padding: 8px 0;
-            transition: color 0.3s;
-        }
-        
-        nav a:hover {
-            color: var(--accent);
-        }
-        
-        nav a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 3px;
-            background: var(--gradient);
-            transition: width 0.3s;
-        }
-        
-        nav a:hover::after {
+
+        .container {
             width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
         }
-        
-        .cta-button {
-            background: var(--gradient);
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--midnight-navy), var(--royal-indigo));
             color: white;
-            border: none;
-            padding: 14px 32px;
+            padding: 1rem 2.5rem;
             border-radius: 50px;
-            font-weight: 600;
-            font-size: 16px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+            border: none;
             cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 25px rgba(58, 134, 255, 0.4);
+            transition: var(--transition);
+            box-shadow: 0 4px 15px var(--shadow);
+            text-transform: uppercase;
+            letter-spacing: 1px;
             position: relative;
             overflow: hidden;
-            z-index: 1;
         }
-        
-        .cta-button::before {
+
+        .btn::before {
             content: '';
             position: absolute;
             top: 0;
@@ -171,1127 +107,1691 @@
             width: 100%;
             height: 100%;
             background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: 0.5s;
-            z-index: -1;
+            transition: var(--transition-slow);
         }
-        
-        .cta-button:hover::before {
+
+        .btn:hover::before {
             left: 100%;
         }
-        
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 30px rgba(58, 134, 255, 0.6);
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(27, 41, 81, 0.4);
+            background: linear-gradient(135deg, var(--royal-indigo), var(--midnight-navy));
         }
-        
-        /* Hero Section */
-        .hero {
-            padding: 180px 0 120px;
-            position: relative;
-            overflow: hidden;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
+
+        .btn-glow {
+            animation: pulse 2s infinite;
         }
-        
-        .hero-content {
-            display: flex;
-            align-items: center;
-            gap: 70px;
-            position: relative;
-            z-index: 2;
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(75, 0, 130, 0.4);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(75, 0, 130, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(75, 0, 130, 0);
+            }
         }
-        
-        .hero-text {
-            flex: 1;
-        }
-        
-        .hero-text h2 {
-            font-size: 4.5rem;
-            font-weight: 800;
-            margin-bottom: 25px;
-            line-height: 1.15;
-            font-family: 'Montserrat', sans-serif;
-        }
-        
-        .hero-text h2 span {
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            display: block;
-        }
-        
-        .hero-text p {
-            font-size: 1.25rem;
-            color: var(--light);
-            margin-bottom: 35px;
-            max-width: 620px;
-            line-height: 1.8;
-        }
-        
-        .hero-buttons {
-            display: flex;
-            gap: 25px;
-            margin-top: 20px;
-        }
-        
-        .secondary-button {
-            background: transparent;
-            color: var(--text);
-            border: 2px solid var(--accent);
-            padding: 14px 32px;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 16px;
-            cursor: pointer;
-            transition: all 0.4s ease;
-        }
-        
-        .secondary-button:hover {
-            background: rgba(58, 134, 255, 0.1);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 20px rgba(58, 134, 255, 0.2);
-        }
-        
-        .hero-visual {
-            flex: 1;
-            perspective: 1200px;
-            min-height: 500px;
-            position: relative;
-        }
-        
-        .floating-cards {
-            position: relative;
-            width: 100%;
-            height: 500px;
-        }
-        
-        .floating-card {
-            position: absolute;
-            width: 280px;
-            height: 350px;
-            border-radius: 20px;
-            backdrop-filter: blur(12px);
-            background: var(--glass);
-            border: 1px solid var(--glass-border);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 30px;
-            text-align: center;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-            transition: transform 0.5s ease;
-            z-index: 1;
-        }
-        
-        .floating-card:nth-child(1) {
+
+        /* Loading animation */
+        .loader-wrapper {
+            position: fixed;
             top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--glass);
-            border: 1px solid rgba(58, 134, 255, 0.3);
-            z-index: 3;
-        }
-        
-        .floating-card:nth-child(2) {
-            top: 100px;
             left: 0;
-            background: var(--glass);
-            border: 1px solid rgba(255, 0, 110, 0.3);
-            z-index: 2;
+            width: 100%;
+            height: 100%;
+            background: var(--pearl-white);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            z-index: 9999;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
         }
-        
-        .floating-card:nth-child(3) {
-            top: 100px;
-            right: 0;
-            background: var(--glass);
-            border: 1px solid rgba(255, 190, 11, 0.3);
-            z-index: 2;
+
+        .loader-wrapper.hidden {
+            opacity: 0;
+            visibility: hidden;
         }
-        
-        .floating-card i {
-            font-size: 60px;
-            margin-bottom: 25px;
-        }
-        
-        .floating-card:nth-child(1) i {
-            color: var(--accent);
-        }
-        
-        .floating-card:nth-child(2) i {
-            color: var(--accent2);
-        }
-        
-        .floating-card:nth-child(3) i {
-            color: var(--accent3);
-        }
-        
-        .floating-card h3 {
-            font-size: 1.8rem;
-            margin-bottom: 15px;
-            font-family: 'Montserrat', sans-serif;
-        }
-        
-        .floating-card p {
-            color: var(--light);
-            font-size: 1rem;
-        }
-        
-        /* Statistics Section */
-        .stats {
-            padding: 120px 0;
-            position: relative;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 70px;
-        }
-        
-        .section-title h2 {
+
+        .brand-logo {
+            font-family: 'Playfair Display', serif;
             font-size: 3rem;
             font-weight: 800;
-            margin-bottom: 20px;
-            font-family: 'Montserrat', sans-serif;
-            position: relative;
+            color: var(--midnight-navy);
+            margin-bottom: 2rem;
+            text-shadow: 0 0 10px rgba(27, 41, 81, 0.2);
+        }
+
+        .brand-logo span {
+            color: var(--champagne-gold);
+        }
+
+        .loader {
+            width: 48px;
+            height: 48px;
+            border: 5px solid var(--midnight-navy);
+            border-bottom-color: transparent;
+            border-radius: 50%;
             display: inline-block;
+            box-sizing: border-box;
+            animation: rotation 1s linear infinite;
         }
-        
-        .section-title h2::after {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
-            height: 5px;
-            background: var(--gradient);
-            border-radius: 3px;
+
+        @keyframes rotation {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
-        
-        .section-title p {
-            color: var(--light);
-            max-width: 750px;
-            margin: 25px auto 0;
-            font-size: 1.15rem;
-            line-height: 1.8;
+
+        .progress-bar {
+            width: 250px;
+            height: 6px;
+            background: rgba(27, 41, 81, 0.2);
+            border-radius: 10px;
+            margin-top: 2rem;
+            overflow: hidden;
         }
-        
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-            gap: 35px;
+
+        .progress {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(135deg, var(--midnight-navy), var(--royal-indigo));
+            border-radius: 10px;
+            transition: width 0.5s ease;
         }
-        
-        .stat-card {
-            background: var(--glass);
-            border-radius: 20px;
-            padding: 40px 25px;
+
+        /* Sticky Notification Bar */
+        .notification-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(135deg, var(--deep-burgundy), var(--rose-gold));
+            color: white;
+            padding: 0.5rem;
             text-align: center;
+            font-weight: 600;
+            z-index: 1001;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            animation: slideDown 0.5s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-100%); }
+            to { transform: translateY(0); }
+        }
+
+        .notification-bar i {
+            margin-right: 0.5rem;
+            color: var(--champagne-gold);
+        }
+
+        .close-notification {
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 30px; /* Adjusted for notification bar */
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: linear-gradient(135deg, rgba(45, 55, 72, 0.85), rgba(74, 85, 104, 0.8), rgba(113, 128, 150, 0.75));
             backdrop-filter: blur(12px);
-            border: 1px solid var(--glass-border);
-            transition: all 0.4s ease;
-            min-height: 320px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+            transition: var(--transition);
+        }
+
+        .header-scrolled {
+            background: linear-gradient(135deg, rgba(45, 55, 72, 0.95), rgba(74, 85, 104, 0.9), rgba(113, 128, 150, 0.85));
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            top: 0; /* Reset top when scrolled */
+        }
+
+        .header-hidden {
+            transform: translateY(-100%);
+        }
+
+        .nav-container {
             display: flex;
-            flex-direction: column;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
+            height: 80px;
+            padding: 0 2rem;
         }
-        
-        .stat-card:hover {
-            transform: translateY(-15px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-            border-color: rgba(56, 189, 248, 0.3);
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #D4AF37;
+            text-decoration: none;
+            text-shadow: 0 0 8px rgba(212, 175, 55, 0.4);
+            transition: var(--transition);
         }
-        
-        .stat-icon {
-            font-size: 52px;
-            margin-bottom: 25px;
-            color: var(--accent);
+
+        .logo:hover {
+            transform: scale(1.05);
         }
-        
-        .stat-number {
-            font-size: 3.2rem;
-            font-weight: 700;
-            margin-bottom: 15px;
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            font-family: 'Montserrat', sans-serif;
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
         }
-        
-        .stat-text {
+
+        .nav-item {
+            margin-left: 2.5rem;
+            position: relative;
+        }
+
+        .nav-link {
+            color: #F7FAFC;
+            text-decoration: none;
+            font-weight: 600;
             font-size: 1.1rem;
-            color: var(--light);
-            font-weight: 500;
-            line-height: 1.4;
-            padding: 0 10px;
-        }
-        
-        /* Categories Section - FIXED VERSION */
-        .categories {
-            padding: 120px 0;
-            background: var(--secondary);
+            transition: var(--transition);
+            padding: 0.5rem 0;
+            text-shadow: 0 0 3px rgba(247, 250, 252, 0.2);
             position: relative;
-            overflow: hidden;
         }
-        
-        .categories-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-        
-        .category-card {
-            background: var(--glass);
-            border-radius: 20px;
-            padding: 40px 25px; /* Adjusted padding for better spacing */
-            text-align: center;
-            backdrop-filter: blur(12px);
-            border: 1px solid var(--glass-border);
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-            min-height: 340px; /* Added min-height to prevent text cutoff */
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .category-card::before {
+
+        .nav-link::after {
             content: '';
             position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
-            transform: rotate(30deg);
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #E2B808;
+            transition: var(--transition);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .nav-link:hover {
+            color: #E2B808;
+            text-shadow: 0 0 10px rgba(226, 184, 8, 0.6);
+        }
+
+        .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 200px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: var(--transition);
+            z-index: 1000;
+        }
+
+        .nav-item:hover .dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-item {
+            padding: 0.8rem 1.5rem;
+            border-bottom: 1px solid #f1f1f1;
+            transition: var(--transition);
+        }
+
+        .dropdown-item:hover {
+            background-color: #f9f9f9;
+        }
+
+        .dropdown-item:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-link {
+            color: var(--charcoal-black);
+            text-decoration: none;
+            transition: var(--transition);
+            display: block;
+        }
+
+        .dropdown-link:hover {
+            color: var(--deep-burgundy);
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+
+        .bar {
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin: 5px auto;
+            background-color: var(--pearl-white);
+            transition: var(--transition);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 800px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(27, 41, 81, 0.8), rgba(75, 0, 130, 0.8)), url('https://images.unsplash.com/photo-1534452203293-494d7ddbf7e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            color: white;
+            padding: 2rem;
+            margin-top: 110px; /* Adjusted for header + notification */
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 50% 50%, transparent 10%, rgba(0, 0, 0, 0.3) 100%);
+            opacity: 0.5;
             z-index: 1;
-            pointer-events: none;
         }
-        
-        .category-card:hover {
-            transform: translateY(-15px);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+
+        .hero-content {
+            max-width: 900px;
+            z-index: 2;
+            animation: fadeInUp 1s ease-out;
         }
-        
-        .category-icon {
-            font-size: 60px;
-            margin-bottom: 25px;
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            color: white;
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+            -webkit-text-fill-color: white;
+            background: none;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2.5rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+
+        .hero .btn {
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            margin: 2rem 0;
+            animation: fadeInUp 1s ease-out 0.8s both;
+        }
+
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            font-size: 1.1rem;
+        }
+
+        .trust-badge i {
+            margin-right: 0.5rem;
+            color: var(--champagne-gold);
+        }
+
+        .countdown {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 2rem auto;
+            max-width: 600px;
+            animation: fadeInUp 1s ease-out 1s both;
+        }
+
+        .countdown-title {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .timer {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        .timer-unit {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 1rem;
+            border-radius: 8px;
+            min-width: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .timer-unit::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transform: translateX(-100%);
+            animation: shimmer 2s infinite;
+        }
+
+        @keyframes shimmer {
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
+        .timer-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        .timer-label {
+            font-size: 0.9rem;
+            color: var(--pearl-white);
+            text-transform: uppercase;
+        }
+
+        /* Winner Notification */
+        .winner-notification {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: white;
+            border-radius: 10px;
+            padding: 1rem;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+            display: flex;
+            align-items: center;
+            z-index: 999;
+            transform: translateX(400px);
+            transition: transform 0.5s ease;
+            max-width: 350px;
+        }
+
+        .winner-notification.visible {
+            transform: translateX(0);
+        }
+
+        .winner-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+
+        .winner-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .winner-info {
+            flex: 1;
+        }
+
+        .winner-name {
+            font-weight: 700;
+            color: var(--midnight-navy);
+        }
+
+        .winner-prize {
+            color: var(--forest-emerald);
+            font-size: 0.9rem;
+        }
+
+        .close-winner {
+            background: none;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            color: var(--charcoal-black);
+            margin-left: 0.5rem;
+        }
+
+        /* How It Works Section */
+        .how-it-works {
+            padding: 6rem 2rem;
+            background: var(--pearl-white);
+        }
+
+        .steps {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 4rem;
+            flex-wrap: wrap;
+        }
+
+        .step {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+            padding: 2rem;
+            margin: 1rem;
+            background: var(--pearl-white);
+            border-radius: 16px;
+            box-shadow: 0 5px 20px var(--shadow);
+            transition: var(--transition);
+            border: 1px solid var(--champagne-gold);
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .step.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .step:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--midnight-navy), var(--royal-indigo));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin: 0 auto 1.5rem;
+            transition: var(--transition);
+        }
+
+        .step:hover .step-number {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .step-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--midnight-navy) 0%, var(--royal-indigo) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, var(--pearl-white) 0%, #f3f1eb 100%);
+        }
+
+        .testimonials-container {
+            position: relative;
+            max-width: 1000px;
+            margin: 4rem auto 0;
+            overflow: hidden;
+        }
+
+        .testimonials-track {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .testimonial {
+            flex: 0 0 100%;
+            padding: 2rem;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            margin: 0 1rem;
+            opacity: 0.5;
+            transform: scale(0.9);
             transition: all 0.5s ease;
         }
-        
-        .category-card:hover .category-icon {
-            transform: scale(1.2) rotate(10deg);
+
+        .testimonial.active {
+            opacity: 1;
+            transform: scale(1);
         }
-        
-        .category-card:nth-child(1) .category-icon {
-            color: var(--accent);
-        }
-        
-        .category-card:nth-child(2) .category-icon {
-            color: var(--accent2);
-        }
-        
-        .category-card:nth-child(3) .category-icon {
-            color: var(--accent3);
-        }
-        
-        .category-card:nth-child(4) .category-icon {
-            color: var(--accent4);
-        }
-        
-        .category-card:nth-child(5) .category-icon {
-            color: var(--accent5);
-        }
-        
-        .category-card h3 {
-            font-size: 1.6rem;
-            margin-bottom: 15px;
-            font-family: 'Montserrat', sans-serif;
-            line-height: 1.3; /* Added line height for better spacing */
-        }
-        
-        .category-card p {
-            color: var(--light);
-            line-height: 1.7;
-            padding: 0 10px; /* Added padding to prevent edge clipping */
-        }
-        
-        /* Performance Section */
-        .performance {
-            padding: 120px 0;
-            position: relative;
-        }
-        
-        .graph-container {
-            background: var(--glass);
-            border-radius: 20px;
-            padding: 40px;
-            backdrop-filter: blur(12px);
-            border: 1px solid var(--glass-border);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .graph-container::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, rgba(58,134,255,0.1), rgba(131,56,236,0.1));
-            z-index: -1;
-        }
-        
-        .graph-placeholder {
-            height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(12, 18, 32, 0.3);
-            border-radius: 15px;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .graph-placeholder canvas {
-            width: 100% !important;
-            height: 100% !important;
-        }
-        
-        /* Testimonials */
-        .testimonials {
-            padding: 120px 0;
-            background: var(--secondary);
-            position: relative;
-        }
-        
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 35px;
-        }
-        
-        .testimonial-card {
-            background: var(--glass);
-            border-radius: 20px;
-            padding: 35px;
-            backdrop-filter: blur(12px);
-            border: 1px solid var(--glass-border);
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .testimonial-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(58,134,255,0.05), rgba(131,56,236,0.05));
-            z-index: -1;
-        }
-        
-        .testimonial-card:hover {
-            transform: translateY(-15px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-            border-color: rgba(56, 189, 248, 0.3);
-        }
-        
+
         .testimonial-content {
             font-style: italic;
-            margin-bottom: 25px;
-            line-height: 1.8;
-            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
             position: relative;
         }
-        
-        .testimonial-content::before {
-            content: """;
-            font-size: 80px;
+
+        .testimonial-content::before,
+        .testimonial-content::after {
+            content: '"';
+            font-size: 3rem;
+            color: var(--champagne-gold);
             position: absolute;
-            top: -40px;
-            left: -20px;
-            opacity: 0.1;
-            color: var(--highlight);
-            font-family: Georgia, serif;
+            line-height: 1;
         }
-        
+
+        .testimonial-content::before {
+            top: -0.5rem;
+            left: -1rem;
+        }
+
+        .testimonial-content::after {
+            bottom: -2rem;
+            right: -1rem;
+        }
+
         .testimonial-author {
             display: flex;
             align-items: center;
-            gap: 20px;
         }
-        
-        .author-avatar {
+
+        .testimonial-avatar {
             width: 60px;
             height: 60px;
             border-radius: 50%;
-            background: var(--gradient);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-            font-size: 1.5rem;
-            flex-shrink: 0;
-        }
-        
-        .author-info h4 {
-            font-weight: 700;
-            margin-bottom: 5px;
-            font-size: 1.2rem;
-        }
-        
-        .author-info p {
-            color: var(--light);
-            font-size: 0.95rem;
-        }
-        
-        /* Contact Section */
-        .contact {
-            padding: 120px 0;
-            position: relative;
-        }
-        
-        .contact-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-        }
-        
-        .contact-form {
-            background: var(--glass);
-            border-radius: 20px;
-            padding: 45px;
-            backdrop-filter: blur(12px);
-            border: 1px solid var(--glass-border);
-            position: relative;
             overflow: hidden;
+            margin-right: 1rem;
         }
-        
-        .contact-form::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
+
+        .testimonial-avatar img {
             width: 100%;
             height: 100%;
-            background: linear-gradient(45deg, rgba(58,134,255,0.1), rgba(255,0,110,0.1));
-            z-index: -1;
+            object-fit: cover;
         }
-        
-        .form-group {
-            margin-bottom: 30px;
+
+        .testimonial-info h4 {
+            margin-bottom: 0.2rem;
+            color: var(--midnight-navy);
+        }
+
+        .testimonial-info p {
+            margin: 0;
+            color: var(--charcoal-black);
+            font-size: 0.9rem;
+        }
+
+        .testimonial-nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+            gap: 1rem;
+        }
+
+        .testimonial-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ddd;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .testimonial-dot.active {
+            background: var(--royal-indigo);
+            transform: scale(1.2);
+        }
+
+        /* Offers Section */
+        .offers {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, #F7F5F3 0%, #E8E6E1 50%, #DDD8D0 100%);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .offers .section-title h2 {
+            color: #2C3E50;
+            font-weight: 700;
+            font-size: 3rem;
+            font-family: 'Playfair Display', serif;
+            text-shadow: 0 2px 4px rgba(44, 62, 80, 0.1);
+            background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .offers .section-title p {
+            color: #5D6D7E;
+            font-size: 1.3rem;
+            font-weight: 500;
+            font-family: 'Lato', sans-serif;
+        }
+
+        .offers-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+        }
+
+        .offer-card {
+            background: linear-gradient(145deg, #FFFFFF 0%, #F8F9FA 100%);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(44, 62, 80, 0.15);
+            transition: var(--transition);
+            opacity: 0;
+            transform: translateY(50px);
+            border: 1px solid #E9ECEF;
             position: relative;
         }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 12px;
-            font-weight: 500;
-            color: var(--light);
+
+        .offer-card::before {
+            content: '';
+            position: absolute;
+            top: 0; right: 0; bottom: 0; left: 0;
+            z-index: -1;
+            margin: -1px;
+            border-radius: inherit;
+            background: linear-gradient(135deg, #8E44AD 0%, #3498DB 25%, #E67E22 50%, #27AE60 75%, #E74C3C 100%);
         }
-        
-        .form-group input,
-        .form-group textarea {
+
+        .offer-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .offer-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .offer-image {
+            height: 250px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .offer-image img {
             width: 100%;
-            padding: 16px 20px;
-            background: rgba(12, 18, 32, 0.5);
-            border: 1px solid var(--glass-border);
-            border-radius: 12px;
-            color: var(--text);
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.05rem;
-            transition: all 0.3s ease;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition-slow);
         }
-        
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--highlight);
-            box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+
+        .offer-card:hover .offer-image img {
+            transform: scale(1.05);
         }
-        
-        .form-group textarea {
-            height: 160px;
-            resize: vertical;
+
+        .offer-content {
+            padding: 2rem;
+            background: linear-gradient(180deg, #FFFFFF 0%, #F8F9FA 100%);
         }
-        
-        .error-message {
-            color: #ff6b6b;
-            font-size: 0.9rem;
-            margin-top: 8px;
-            display: none;
+
+        .offer-title {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #2C3E50;
+            font-weight: 600;
+            font-family: 'Playfair Display', serif;
+            text-shadow: 0 1px 2px rgba(44, 62, 80, 0.1);
         }
-        
+
+        .offer-description {
+            margin-bottom: 1.5rem;
+            color: #5D6D7E;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            font-weight: 400;
+            font-family: 'Lato', sans-serif;
+        }
+
+        .offer-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .offer-feature {
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: flex-start;
+            color: #34495E;
+            font-weight: 500;
+            font-family: 'Lato', sans-serif;
+        }
+
+        .offer-feature span {
+            font-weight: 600;
+            color: #2C3E50;
+        }
+
+        .offer-feature i {
+            color: #8E44AD;
+            margin-right: 0.8rem;
+            margin-top: 0.2rem;
+        }
+
+        .offer-cta {
+            text-align: center;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 6rem 2rem;
+            background: var(--pearl-white);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid var(--royal-indigo);
+            transition: var(--transition);
+        }
+
+        .faq-item:hover {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            background: var(--pearl-white);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .faq-question i {
+            transition: var(--transition);
+            color: var(--royal-indigo);
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding: 1.5rem;
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, var(--pearl-white) 0%, var(--rose-gold) 100%);
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 4rem;
+        }
+
         .contact-info {
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            gap: 2rem;
         }
-        
-        .contact-info h3 {
-            font-size: 2.3rem;
-            margin-bottom: 35px;
-            font-family: 'Montserrat', sans-serif;
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-        
-        .contact-details {
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-        }
-        
+
         .contact-item {
             display: flex;
-            align-items: center;
-            gap: 20px;
-            transition: transform 0.3s ease;
+            align-items: flex-start;
+            gap: 1rem;
+            transition: var(--transition);
         }
-        
+
         .contact-item:hover {
-            transform: translateX(10px);
+            transform: translateX(5px);
         }
-        
-        .contact-icon {
-            width: 60px;
-            height: 60px;
-            background: var(--gradient);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            flex-shrink: 0;
+
+        .contact-item i {
+            font-size: 1.5rem;
+            color: var(--royal-indigo);
         }
-        
-        .contact-text h4 {
-            font-weight: 700;
-            margin-bottom: 8px;
-            font-size: 1.25rem;
-        }
-        
-        .contact-text p {
-            color: var(--light);
-            font-size: 1.05rem;
-        }
-        
-        /* Footer */
-        footer {
-            background: rgba(12, 18, 32, 0.98);
-            padding: 80px 0 40px;
-            border-top: 1px solid var(--glass-border);
-        }
-        
-        .footer-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-            gap: 45px;
-            margin-bottom: 60px;
-        }
-        
-        .footer-col h4 {
-            font-size: 1.4rem;
-            margin-bottom: 30px;
+
+        .contact-form {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px var(--shadow);
+            border: 2px solid transparent;
+            background-clip: padding-box;
             position: relative;
-            padding-bottom: 15px;
-            font-weight: 700;
         }
-        
-        .footer-col h4::after {
+
+        .contact-form::before {
             content: '';
             position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 50px;
-            height: 4px;
-            background: var(--gradient);
-            border-radius: 2px;
+            top: 0; right: 0; bottom: 0; left: 0;
+            z-index: -1;
+            margin: -2px;
+            border-radius: inherit;
+            background: linear-gradient(135deg, var(--midnight-navy), var(--royal-indigo), var(--deep-burgundy));
         }
-        
+
+        .form-group {
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--royal-indigo);
+            box-shadow: 0 0 0 3px rgba(75, 0, 130, 0.1);
+        }
+
+        textarea.form-input {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--charcoal-black);
+            color: white;
+            padding: 5rem 2rem 2rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3rem;
+        }
+
+        .footer-column h3 {
+            color: var(--champagne-gold);
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
         .footer-links {
             list-style: none;
         }
-        
-        .footer-links li {
-            margin-bottom: 15px;
+
+        .footer-link {
+            margin-bottom: 0.8rem;
+            transition: var(--transition);
         }
-        
-        .footer-links a {
-            color: var(--light);
+
+        .footer-link:hover {
+            transform: translateX(5px);
+        }
+
+        .footer-link a {
+            color: var(--pearl-white);
             text-decoration: none;
-            transition: all 0.3s ease;
-            display: block;
-            padding: 8px 0;
-            position: relative;
-            padding-left: 20px;
+            transition: var(--transition);
         }
-        
-        .footer-links a::before {
-            content: '→';
-            position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            color: var(--highlight);
-            opacity: 0;
-            transition: all 0.3s ease;
+
+        .footer-link a:hover {
+            color: var(--champagne-gold);
         }
-        
-        .footer-links a:hover {
-            color: var(--highlight);
-            padding-left: 30px;
-        }
-        
-        .footer-links a:hover::before {
-            opacity: 1;
-            left: 5px;
-        }
-        
+
         .social-links {
             display: flex;
-            gap: 18px;
-            margin-top: 25px;
+            gap: 1rem;
+            margin-top: 1.5rem;
         }
-        
+
         .social-link {
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            background: var(--glass);
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: all 0.3s ease;
-            border: 1px solid var(--glass-border);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            transition: var(--transition);
         }
-        
+
         .social-link:hover {
-            background: var(--gradient);
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(58, 134, 255, 0.4);
+            background: var(--royal-indigo);
+            transform: translateY(-3px);
         }
-        
-        .copyright {
-            text-align: center;
-            padding-top: 40px;
-            border-top: 1px solid var(--glass-border);
-            color: var(--light);
-            font-size: 1rem;
+
+        .newsletter-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
         }
-        
-        /* Mobile Navigation */
-        .mobile-toggle {
-            display: none;
-            font-size: 24px;
+
+        .newsletter-input {
+            padding: 1rem;
+            border-radius: 50px;
+            border: none;
+            font-family: inherit;
+        }
+
+        .newsletter-btn {
+            background: linear-gradient(135deg, var(--midnight-navy), var(--royal-indigo));
+            color: white;
+            border: none;
+            padding: 1rem;
+            border-radius: 50px;
             cursor: pointer;
-            color: var(--text);
-            z-index: 1001;
+            font-weight: 700;
+            transition: var(--transition);
         }
-        
-        /* Floating CTA */
-        .floating-cta {
+
+        .newsletter-btn:hover {
+            transform: scale(1.03);
+            background: linear-gradient(135deg, var(--royal-indigo), var(--midnight-navy));
+        }
+
+        .footer-bottom {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
             position: fixed;
             bottom: 30px;
             right: 30px;
-            background: var(--gradient);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--midnight-navy), var(--royal-indigo));
             color: white;
-            padding: 18px 35px;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 18px;
-            cursor: pointer;
-            box-shadow: 0 8px 30px rgba(58, 134, 255, 0.6);
-            z-index: 999;
             display: flex;
             align-items: center;
-            gap: 10px;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 999;
         }
-        
-        .floating-cta:hover {
-            transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 12px 35px rgba(58, 134, 255, 0.8);
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
         }
-        
-        /* Animations */
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-            100% { transform: translateY(0px); }
+
+        .back-to-top:hover {
+            transform: translateY(-5px);
+            background: linear-gradient(135deg, var(--royal-indigo), var(--midnight-navy));
         }
-        
-        @keyframes floatParticle {
-            to {
-                transform: translateY(-100px);
-            }
-        }
-        
-        @keyframes pulse {
-            0% { transform: scale(1); opacity: 0.7; }
-            50% { transform: scale(1.2); opacity: 1; }
-            100% { transform: scale(1); opacity: 0.7; }
-        }
-        
-        @keyframes shine {
-            0% { transform: translateX(-100%); }
-            100% { transform: translateX(100%); }
-        }
-        
+
         /* Responsive Design */
-        @media (max-width: 1200px) {
-            .hero-content {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .hero-text p {
-                margin: 0 auto 35px;
-            }
-            
-            .hero-buttons {
-                justify-content: center;
-            }
-            
-            .contact-container {
-                grid-template-columns: 1fr;
-                gap: 50px;
-            }
-            
-            .hero-text h2 {
-                font-size: 3.5rem;
-            }
-            
-            .floating-cards {
-                height: 400px;
-                margin-top: 50px;
-            }
-            
-            .floating-card {
-                width: 240px;
-                height: 320px;
-            }
-        }
-        
-        @media (max-width: 992px) {
-            .hero-text h2 {
+        @media (max-width: 1024px) {
+            h1 {
                 font-size: 3rem;
             }
             
-            nav ul {
-                gap: 20px;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            nav ul {
-                position: fixed;
-                top: 0;
-                right: -100%;
-                width: 280px;
-                height: 100vh;
-                background: rgba(12, 18, 32, 0.98);
-                backdrop-filter: blur(10px);
-                flex-direction: column;
-                padding: 100px 30px;
-                transition: all 0.5s ease;
-                z-index: 1000;
-                box-shadow: -5px 0 30px rgba(0, 0, 0, 0.2);
+            .offers-grid {
+                gap: 2rem;
             }
             
-            nav ul.active {
-                right: 0;
-            }
-            
-            nav ul li {
-                margin: 15px 0;
-            }
-            
-            .mobile-toggle {
-                display: block;
-            }
-            
-            .hero-text h2 {
-                font-size: 2.5rem;
-            }
-            
-            .hero-buttons {
-                flex-direction: column;
-                align-items: center;
-                gap: 15px;
-            }
-            
-            .section-title h2 {
-                font-size: 2.3rem;
-            }
-            
-            .floating-cards {
-                height: auto;
-                display: flex;
-                flex-direction: column;
-                gap: 30px;
-                align-items: center;
-            }
-            
-            .floating-card {
-                position: relative !important;
-                top: auto !important;
-                left: auto !important;
-                right: auto !important;
-                transform: none !important;
-                width: 100%;
-                max-width: 350px;
-                margin-bottom: 20px;
-            }
-            
-            .stats-grid, .categories-grid, .testimonials-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .stat-card {
-                min-height: 280px;
-            }
-            
-            .category-card {
-                min-height: 300px; /* Adjusted for mobile */
-            }
-        }
-        
-        @media (max-width: 576px) {
-            .hero {
-                padding: 160px 0 80px;
-            }
-            
-            .hero-text h2 {
-                font-size: 2.2rem;
-            }
-            
-            .floating-card {
-                height: auto;
-                padding: 25px;
-            }
-            
-            .section-title h2 {
-                font-size: 2rem;
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
             }
             
             .contact-container {
-                gap: 40px;
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+                z-index: 101;
             }
             
-            .contact-form {
-                padding: 30px;
+            .hamburger.active .bar:nth-child(2) {
+                opacity: 0;
             }
             
-            .stat-text {
-                font-size: 1rem;
+            .hamburger.active .bar:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
             }
             
-            .category-card {
-                min-height: 280px; /* Further adjustment for small screens */
+            .hamburger.active .bar:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+            }
+            
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 80px;
+                gap: 0;
+                flex-direction: column;
+                background: var(--charcoal-black);
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+                padding: 2rem 0;
+            }
+            
+            .nav-menu.active {
+                left: 0;
+            }
+            
+            .nav-item {
+                margin: 1.5rem 0;
+            }
+            
+            .dropdown {
+                position: static;
+                width: 100%;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                box-shadow: none;
+                background: transparent;
+                margin-top: 1rem;
+                display: none;
+            }
+            
+            .dropdown.show {
+                display: block;
+            }
+            
+            .dropdown-item {
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+            
+            .dropdown-link {
+                color: var(--pearl-white);
+            }
+            
+            .hero {
+                height: 700px;
+                margin-top: 110px;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .offers-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .timer-unit {
+                min-width: 60px;
+                padding: 0.8rem;
+            }
+            
+            .timer-value {
+                font-size: 2rem;
+            }
+            
+            .steps {
+                flex-direction: column;
+            }
+
+            .winner-notification {
+                max-width: 300px;
+                right: 10px;
+                bottom: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                height: 600px;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .trust-badges {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .timer {
+                gap: 0.8rem;
+            }
+            
+            .timer-unit {
+                min-width: 50px;
+                padding: 0.5rem;
+            }
+            
+            .timer-value {
+                font-size: 1.5rem;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .back-to-top {
+                bottom: 20px;
+                right: 20px;
+                width: 40px;
+                height: 40px;
+            }
+
+            .notification-bar {
+                font-size: 0.9rem;
+                padding: 0.5rem 2rem 0.5rem 0.5rem;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Particle Background -->
-    <div class="particle-bg" id="particle-bg"></div>
+    <!-- Loading Animation -->
+    <div class="loader-wrapper">
+        <div class="brand-logo">Gift<span>Rewards</span></div>
+        <span class="loader"></span>
+        <div class="progress-bar">
+            <div class="progress" id="loading-progress"></div>
+        </div>
+    </div>
 
-    <!-- Header -->
+    <!-- Sticky Notification Bar -->
+    <div class="notification-bar">
+        <i class="fas fa-gift"></i>
+        <span>Limited time offer! Enter now for a chance to win $500 in gift cards!</span>
+        <button class="close-notification">&times;</button>
+    </div>
+
+    <!-- Sticky Navigation -->
     <header id="header">
-        <div class="container header-container">
-            <div class="logo">
-                <div class="logo-icon"><i class="fas fa-stars"></i></div>
-                <h1>NovaServe</h1>
+        <div class="nav-container">
+            <a href="#" class="logo">GiftCardSweeps</a>
+            
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                <li class="nav-item">
+                    <a href="#offers" class="nav-link">Offers <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown">
+                        <li class="dropdown-item"><a href="#amazon" class="dropdown-link">Amazon</a></li>
+                        <li class="dropdown-item"><a href="#retail" class="dropdown-link">Retail</a></li>
+                        <li class="dropdown-item"><a href="#visa" class="dropdown-link">Visa</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="#how-it-works" class="nav-link">How It Works</a></li>
+                <li class="nav-item">
+                    <a href="#faq" class="nav-link">FAQ <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown">
+                        <li class="dropdown-item"><a href="#eligibility" class="dropdown-link">Eligibility</a></li>
+                        <li class="dropdown-item"><a href="#rules" class="dropdown-link">Rules</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
-            <nav>
-                <div class="mobile-toggle" id="mobile-toggle">
-                    <i class="fas fa-bars"></i>
-                </div>
-                <ul id="nav-menu">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#statistics">Performance</a></li>
-                    <li><a href="#categories">Verticals</a></li>
-                    <li><a href="#performance">Analytics</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <div class="container hero-content">
-            <div class="hero-text">
-                <h2>Premium <span>Affiliate Solutions</span> <span>for Strategic Marketers</span></h2>
-                <p>NovaServe delivers cutting-edge affiliate marketing solutions with premium partnerships, advanced analytics, and unparalleled support to maximize your earning potential in today's competitive landscape.</p>
-                <div class="hero-buttons">
-                    <button class="cta-button">Explore Opportunities</button>
-                    <button class="secondary-button">View Our Portfolio</button>
+        <div class="hero-content">
+            <h1>Claim Your Chance to Win FREE Gift Cards Up to $500</h1>
+            <p>Enter in 30 seconds for instant-win opportunities</p>
+            <a href="#offers" class="btn btn-glow">Enter Now</a>
+            
+            <div class="trust-badges">
+                <div class="trust-badge">
+                    <i class="fas fa-lock"></i>
+                    <span>100% Secure & Free</span>
+                </div>
+                <div class="trust-badge">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Verified Daily Winners</span>
+                </div>
+                <div class="trust-badge">
+                    <i class="fas fa-users"></i>
+                    <span>25,843+ Winners This Month</span>
                 </div>
             </div>
-            <div class="hero-visual">
-                <div class="floating-cards">
-                    <div class="floating-card">
-                        <i class="fas fa-shield-alt"></i>
-                        <h3>Protection Services</h3>
-                        <p>High-conversion solutions for security and protection services</p>
+            
+            <div class="countdown">
+                <div class="countdown-title">Sweepstakes Ends In:</div>
+                <div class="timer">
+                    <div class="timer-unit">
+                        <div class="timer-value" id="days">03</div>
+                        <div class="timer-label">Days</div>
                     </div>
-                    <div class="floating-card">
-                        <i class="fas fa-home"></i>
-                        <h3>Residential Solutions</h3>
-                        <p>Optimized campaigns for home and property services</p>
+                    <div class="timer-unit">
+                        <div class="timer-value" id="hours">12</div>
+                        <div class="timer-label">Hours</div>
                     </div>
-                    <div class="floating-card">
-                        <i class="fas fa-hand-holding-usd"></i>
-                        <h3>Financial Solutions</h3>
-                        <p>Premium financial service partnerships with exceptional conversion rates</p>
+                    <div class="timer-unit">
+                        <div class="timer-value" id="minutes">45</div>
+                        <div class="timer-label">Minutes</div>
+                    </div>
+                    <div class="timer-unit">
+                        <div class="timer-value" id="seconds">30</div>
+                        <div class="timer-label">Seconds</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Statistics Section -->
-    <section class="stats" id="statistics">
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="how-it-works">
         <div class="container">
             <div class="section-title">
-                <h2>Proven Performance</h2>
-                <p>Our strategic approach delivers consistent results across diverse marketing verticals.</p>
+                <h2>How It Works</h2>
+                <p>Claiming your free gift card is simple and takes less than a minute</p>
             </div>
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-icon"><i class="fas fa-chart-line"></i></div>
-                    <div class="stat-number">98.7%</div>
-                    <div class="stat-text">Campaign Success Rate</div>
+            
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3 class="step-title">Select Your Gift Card</h3>
+                    <p>Choose from our exclusive offers for Amazon, Walmart, Visa, Target, and more.</p>
                 </div>
-                <div class="stat-card">
-                    <div class="stat-icon"><i class="fas fa-sync-alt"></i></div>
-                    <div class="stat-number">24/7</div>
-                    <div class="stat-text">Real-time Optimization</div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3 class="step-title">Enter Your Information</h3>
+                    <p>Provide your details to register for the sweepstakes. No credit card required.</p>
                 </div>
-                <div class="stat-card">
-                    <div class="stat-icon"><i class="fas fa-users"></i></div>
-                    <div class="stat-number">500+</div>
-                    <div class="stat-text">Premium Partnerships</div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3 class="step-title">Confirm Your Entry</h3>
+                    <p>Verify your email address to complete your entry into the sweepstakes.</p>
                 </div>
-                <div class="stat-card">
-                    <div class="stat-icon"><i class="fas fa-rocket"></i></div>
-                    <div class="stat-number">3.5x</div>
-                    <div class="stat-text">Average ROI Increase</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Categories Section - Fixed Version -->
-    <section class="categories" id="categories">
-        <div class="container">
-            <div class="section-title">
-                <h2>Specialized Verticals</h2>
-                <p>We deliver exceptional results across key marketing verticals through specialized strategies.</p>
-            </div>
-            <div class="categories-grid">
-                <div class="category-card">
-                    <div class="category-icon"><i class="fas fa-car"></i></div>
-                    <h3>Protection Services</h3>
-                    <p>Strategic marketing solutions for protection-based services with high conversion potential.</p>
-                </div>
-                <div class="category-card">
-                    <div class="category-icon"><i class="fas fa-home"></i></div>
-                    <h3>Residential Solutions</h3>
-                    <p>Optimized campaigns for residential services with exceptional conversion metrics.</p>
-                </div>
-                <div class="category-card">
-                    <div class="category-icon"><i class="fas fa-hand-holding-usd"></i></div>
-                    <h3>Financial Solutions</h3>
-                    <p>High-performing financial marketing partnerships with premium conversion rates.</p>
-                </div>
-                <div class="category-card">
-                    <div class="category-icon"><i class="fas fa-file-invoice-dollar"></i></div>
-                    <h3>Credit Solutions</h3>
-                    <p>Specialized credit service marketing with exceptional performance metrics.</p>
-                </div>
-                <div class="category-card">
-                    <div class="category-icon"><i class="fas fa-heartbeat"></i></div>
-                    <h3>Wellness Services</h3>
-                    <p>Targeted marketing for wellness services with premium conversion funnels.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Performance Graph Section -->
-    <section class="performance" id="performance">
-        <div class="container">
-            <div class="section-title">
-                <h2>Performance Analytics</h2>
-                <p>Advanced metrics and insights to optimize your marketing strategy and maximize ROI.</p>
-            </div>
-            <div class="graph-container">
-                <div class="graph-placeholder">
-                    <canvas id="performanceChart"></canvas>
+                
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3 class="step-title">Check If You've Won</h3>
+                    <p>Winners are selected daily and notified instantly via email.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Testimonials Section -->
-    <section class="testimonials" id="testimonials">
+    <section class="testimonials">
         <div class="container">
             <div class="section-title">
-                <h2>Industry Recognition</h2>
-                <p>What leading marketers say about our premium performance solutions.</p>
+                <h2>Recent Winners</h2>
+                <p>See what our lucky winners have to say</p>
             </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        "NovaServe's specialized approach transformed our marketing strategy. Their vertical expertise and analytics platform helped us increase conversions by 140% in just two quarters."
+            
+            <div class="testimonials-container">
+                <div class="testimonials-track">
+                    <div class="testimonial active">
+                        <div class="testimonial-content">
+                            I couldn't believe it when I got the email saying I won a $500 Amazon gift card! I used it to buy a new tablet for my daughter's birthday. This is absolutely legit!
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">
+                                <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Sarah Johnson">
+                            </div>
+                            <div class="testimonial-info">
+                                <h4>Sarah Johnson</h4>
+                                <p>Won $500 Amazon Gift Card</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">SJ</div>
-                        <div class="author-info">
-                            <h4>Sarah Johnson</h4>
-                            <p>Marketing Director, TechGlobal</p>
+                    
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            I've entered several times and finally won a $250 Walmart gift card last week. The process was smooth, and I received my digital code within hours. Thank you!
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Thompson">
+                            </div>
+                            <div class="testimonial-info">
+                                <h4>Michael Thompson</h4>
+                                <p>Won $250 Walmart Gift Card</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            I was skeptical at first, but decided to give it a try. To my surprise, I won a $100 Visa gift card on my third entry! I used it to fill up my gas tank. So grateful!
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">
+                                <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Jessica Williams">
+                            </div>
+                            <div class="testimonial-info">
+                                <h4>Jessica Williams</h4>
+                                <p>Won $100 Visa Gift Card</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        "The level of insight NovaServe provides is unmatched. We've optimized our campaigns based on their analytics, resulting in a 65% increase in ROI while reducing acquisition costs."
+                
+                <div class="testimonial-nav">
+                    <div class="testimonial-dot active" data-index="0"></div>
+                    <div class="testimonial-dot" data-index="1"></div>
+                    <div class="testimonial-dot" data-index="2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offers Section -->
+    <section class="offers" id="offers">
+        <div class="container">
+            <div class="section-title">
+                <h2>Claim Your Free Gift Cards</h2>
+                <p>Select from our exclusive offers below</p>
+            </div>
+            
+            <div class="offers-grid">
+                <!-- Amazon Offer -->
+                <div class="offer-card" id="amazon">
+                    <div class="offer-image">
+                        <img src="https://images.unsplash.com/photo-1523474253046-8cd2748b5fd2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="$500 Amazon Gift Card">
                     </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">MR</div>
-                        <div class="author-info">
-                            <h4>Michael Roberts</h4>
-                            <p>Head of Growth, InnovateCo</p>
+                    <div class="offer-content">
+                        <h3 class="offer-title">Win a $500 Amazon Gift Card</h3>
+                        <p class="offer-description">Shop for anything on the world's largest online marketplace!</p>
+                        <ul class="offer-features">
+                            <li class="offer-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Instant entry confirmation</span>
+                            </li>
+                            <li class="offer-feature">
+                                <i class="fas fa-gift"></i>
+                                <span>Digital delivery to your inbox</span>
+                            </li>
+                            <li class="offer-feature">
+                                <i class="fas fa-user-clock"></i>
+                                <span>US residents 18+ only</span>
+                            </li>
+                        </ul>
+                        <div class="offer-cta">
+                            <a href="https://novaserve.xyz/" target="_blank" class="btn">Claim Your Entry Now</a>
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        "Working with NovaServe has been a game-changer. Their premium partnerships and strategic guidance helped us expand our marketing reach with exceptional results."
+                
+                <!-- Walmart Offer -->
+                <div class="offer-card" id="retail">
+                    <div class="offer-image">
+                        <img src="https://images.unsplash.com/photo-1578916171728-46686eac8d58?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="$250 Walmart Gift Card">
                     </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">ED</div>
-                        <div class="author-info">
-                            <h4>Emma Davis</h4>
-                            <p>CEO, MarketExpand</p>
+                    <div class="offer-content">
+                        <h3 class="offer-title">Win a $250 Walmart Gift Card</h3>
+                        <p class="offer-description">Get everything you need from groceries to electronics!</p>
+                        <ul class="offer-features">
+                            <li class="offer-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>No purchase necessary</span>
+                            </li>
+                            <li class="offer-feature">
+                                <i class="fas fa-gift"></i>
+                                <span>Redeem online or in-store</span>
+                            </li>
+                            <li class="offer-feature">
+                                <i class="fas fa-user-clock"></i>
+                                <span>Limited entries available</span>
+                            </li>
+                        </ul>
+                        <div class="offer-cta">
+                            <a href="https://novaserve.xyz/" target="_blank" class="btn">Claim Your Entry Now</a>
                         </div>
+                    </div>
+                </div>
+                
+                <!-- Visa Offer -->
+                <div class="offer-card" id="visa">
+                    <div class="offer-image">
+                        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="$100 Visa Gift Card">
+                    </div>
+                    <div class="offer-content">
+                        <h3 class="offer-title">Win a $100 Visa Gift Card</h3>
+                        <p class="offer-description">Use it anywhere Visa is accepted - total spending freedom!</p>
+                        <ul class="offer-features">
+                            <li class="offer-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Accepted at millions of locations</span>
+                            </li>
+                            <li class="offer-feature">
+                                <i class="fas fa-gift"></i>
+                                <span>Perfect for gifts or personal use</span>
+                            </li>
+                            <li class="offer-feature">
+                                <i class="fas fa-user-clock"></i>
+                                <span>Winners selected daily</span>
+                            </li>
+                        </ul>
+                        <div class="offer-cta">
+                            <a href="https://novaserve.xyz/" target="_blank" class="btn">Claim Your Entry Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Target Offer -->
+                <div class="offer-card">
+                    <div class="offer-image">
+                        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="$300 Target Gift Card">
+                    </div>
+                    <div class="offer-content">
+                        <h3 class="offer-title">Win a $300 Target Gift Card</h3>
+                        <p class="offer-description">From trendy home decor to everyday essentials!</p>
+                        <ul class="offer-features">
+                            <li class="offer-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Expect more, pay less</span>
+                            </li>
+                            <li class="offer-feature">
+                                <i class="fas fa-gift"></i>
+                                <span>Use in-store or online</span>
+                            </li>
+                            <li class="offer-feature">
+                                <i class="fas fa-user-clock"></i>
+                                <span>No fees or expiration</span>
+                            </li>
+                        </ul>
+                        <div class="offer-cta">
+                            <a href="https://novaserve.xyz/" target="_blank" class="btn">Claim Your Entry Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Starbucks Offer -->
+                <div class="offer-card">
+                    <div class="offer-image">
+                        <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="$150 Starbucks Gift Card">
+                    </div>
+                    <div class="offer-content">
+                        <h3 class="offer-title">Win a $150 Starbucks Gift Card</h3>
+                        <p class="offer-description">Enjoy your favorite beverages and treats on us!</p>
+                        <ul class="offer-features">
+                            <li class="offer-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Perfect for coffee lovers</span>
+                            </li>
+                            <li class="offer-feature">
+                                <i class="fas fa-gift"></i>
+                                <span>Reloadable and reusable</span>
+                            </li>
+                            <li class="offer-feature">
+                                <i class="fas fa-user-clock"></i>
+                                <span>Valid at all locations worldwide</span>
+                            </li>
+                        </ul>
+                        <div class="offer-cta">
+                            <a href="https://novaserve.xyz/" target="_blank" class="btn">Claim Your Entry Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Best Buy Offer -->
+                <div class="offer-card">
+                    <div class="offer-image">
+                        <img src="https://images.unsplash.com/photo-1498049794561-7780e7231661?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="$200 Best Buy Gift Card">
+                    </div>
+                    <div class="offer-content">
+                        <h3 class="offer-title">Win a $200 Best Buy Gift Card</h3>
+                        <p class="offer-description">Upgrade your tech with the latest electronics and gadgets!</p>
+                        <ul class="offer-features">
+                            <li class="offer-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Get the latest tech products</span>
+                            </li>
+                            <li class="offer-feature">
+                                <i class="fas fa-gift"></i>
+                                <span>Expert advice in stores</span>
+                            </li>
+                            <li class="offer-feature">
+                                <i class="fas fa-user-clock"></i>
+                                <span>Free shipping on orders over $35</span>
+                            </li>
+                        </ul>
+                        <div class="offer-cta">
+                            <a href="https://novaserve.xyz/" target="_blank" class="btn">Claim Your Entry Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <p>Everything you need to know about our gift card sweepstakes</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Who is eligible to enter the sweepstakes?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You must be at least 18 years old and a legal resident of the United States to enter our sweepstakes. Employees of GiftCardSweeps.com and their immediate family members are not eligible to participate.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Is there any cost to enter?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No, there is absolutely no cost to enter our sweepstakes. We offer free entry methods as required by law. You will never be asked for credit card information to participate.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How often are winners selected?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Winners are selected daily through random drawings. The number of winners depends on the specific promotion and available prizes. All winners are notified via email within 24 hours of selection.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How will I receive my gift card if I win?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>All gift cards are delivered digitally to the email address you provided during registration. Most winners receive their gift card codes within 24-48 hours of being notified. Physical gift cards are shipped to the address provided if required.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can I enter multiple times?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, you can enter each sweepstakes once per day. Some promotions may allow additional entries through bonus methods like referring friends or completing specific actions.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Where can I view the official rules?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The complete official rules for each sweepstakes can be found on the specific offer page. You can also access our general terms and conditions through the link in the website footer.</p>
                     </div>
                 </div>
             </div>
@@ -1302,67 +1802,70 @@
     <section class="contact" id="contact">
         <div class="container">
             <div class="section-title">
-                <h2>Strategic Partnership Inquiry</h2>
-                <p>Connect with our team to explore premium marketing opportunities.</p>
+                <h2>Contact Us</h2>
+                <p>Have questions? We're here to help!</p>
             </div>
+            
             <div class="contact-container">
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" placeholder="Enter your name" required>
-                            <div class="error-message" id="nameError"></div>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" placeholder="Enter your email" required>
-                            <div class="error-message" id="emailError"></div>
-                        </div>
-                        <div class="form-group">
-                            <label for="company">Company</label>
-                            <input type="text" id="company" placeholder="Enter your company name" required>
-                            <div class="error-message" id="companyError"></div>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">How can we assist you?</label>
-                            <textarea id="message" placeholder="Describe your marketing needs" required></textarea>
-                            <div class="error-message" id="messageError"></div>
-                        </div>
-                        <button type="submit" class="cta-button">Request Consultation</button>
-                    </form>
-                </div>
                 <div class="contact-info">
-                    <h3>Global Headquarters</h3>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-                            <div class="contact-text">
-                                <h4>Strategic Operations Center</h4>
-                                <p>107, Dharam Pura, GT Road<br>India 201001</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
-                            <div class="contact-text">
-                                <h4>Partnership Inquiries</h4>
-                                <p>+91 (798) 566-0387</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-                            <div class="contact-text">
-                                <h4>Strategic Relations</h4>
-                                <p>admin@novaserve.com</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon"><i class="fas fa-clock"></i></div>
-                            <div class="contact-text">
-                                <h4>Consultation Hours</h4>
-                                <p>Monday-Friday: 8AM - 7PM EST</p>
-                            </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Our Address</h3>
+                            <p>1234 Sweepstakes Avenue, Suite 567<br>Miami, FL 33101</p>
                         </div>
                     </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email Us</h3>
+                            <p>support@giftcardsweeps.com<br>winners@giftcardsweeps.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h3>Call Us</h3>
+                            <p>1-800-GIFT-CARD<br>1-800-WIN-CARDS</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>Customer Support Hours</h3>
+                            <p>Monday-Friday: 9am - 8pm EST<br>Saturday: 10am - 6pm EST<br>Sunday: Closed</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Send us a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" id="name" class="form-input" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" class="form-label">Your Email</label>
+                            <input type="email" id="email" class="form-input" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" id="subject" class="form-input" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" class="form-label">Your Message</label>
+                            <textarea id="message" class="form-input" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -1371,286 +1874,364 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="footer-container">
-                <div class="footer-col">
-                    <div class="logo">
-                        <div class="logo-icon"><i class="fas fa-stars"></i></div>
-                        <h1>NovaServe</h1>
-                    </div>
-                    <p>Premium performance marketing solutions for strategic partners. Maximize ROI with our cutting-edge platform and data-driven approach.</p>
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>GiftCardSweeps</h3>
+                    <p>Your trusted source for legitimate gift card giveaways and sweepstakes. We bring you the best opportunities to win free gift cards from your favorite brands.</p>
                     <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
                         <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
                         <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-pinterest"></i></a>
                     </div>
                 </div>
-                <div class="footer-col">
-                    <h4>Solutions</h4>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
                     <ul class="footer-links">
-                        <li><a href="#">Performance Marketing</a></li>
-                        <li><a href="#">Affiliate Program Management</a></li>
-                        <li><a href="#">Conversion Optimization</a></li>
-                        <li><a href="#">Strategic Partnerships</a></li>
-                        <li><a href="#">ROI Maximization</a></li>
+                        <li class="footer-link"><a href="#">Home</a></li>
+                        <li class="footer-link"><a href="#offers">Current Offers</a></li>
+                        <li class="footer-link"><a href="#how-it-works">How It Works</a></li>
+                        <li class="footer-link"><a href="#faq">FAQ</a></li>
+                        <li class="footer-link"><a href="#contact">Contact Us</a></li>
                     </ul>
                 </div>
-                <div class="footer-col">
-                    <h4>Resources</h4>
+                
+                <div class="footer-column">
+                    <h3>Legal</h3>
                     <ul class="footer-links">
-                        <li><a href="#">Marketing Insights</a></li>
-                        <li><a href="#">Industry Reports</a></li>
-                        <li><a href="#">Case Studies</a></li>
-                        <li><a href="#">Webinars & Events</a></li>
-                        <li><a href="#">Partner Portal</a></li>
+                        <li class="footer-link"><a href="#">Privacy Policy</a></li>
+                        <li class="footer-link"><a href="#">Terms of Service</a></li>
+                        <li class="footer-link"><a href="#">Sweepstakes Rules</a></li>
+                        <li class="footer-link"><a href="#">Disclaimer</a></li>
                     </ul>
                 </div>
-                <div class="footer-col">
-                    <h4>Company</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Leadership Team</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Press & Media</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
+                
+                <div class="footer-column">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to get notified about new gift card offers and exclusive giveaways!</p>
+                    <form class="newsletter-form">
+                        <input type="email" class="newsletter-input" placeholder="Your Email Address" required>
+                        <button type="submit" class="newsletter-btn">Subscribe</button>
+                    </form>
                 </div>
             </div>
-            <div class="copyright">
-                <p>&copy; 2024-25 NovaServe. All rights reserved. Designed with <i class="fas fa-heart" style="color: var(--accent);"></i> for strategic marketers.</p>
+            
+            <div class="footer-bottom">
+                <p>© 2025 GiftCardSweeps.com. All rights reserved.</p>
+                <p>Void where prohibited. Odds of winning depend on the number of entries received. No purchase necessary to enter or win. Sponsored by GiftCardSweeps.com.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Floating CTA -->
-    <div class="floating-cta" id="floatingCta">
-        <i class="fas fa-rocket"></i> Get Started
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Winner Notification -->
+    <div class="winner-notification">
+        <div class="winner-avatar">
+            <img src="https://randomuser.me/api/portraits/women/26.jpg" alt="Recent Winner">
+        </div>
+        <div class="winner-info">
+            <div class="winner-name">Emily R.</div>
+            <div class="winner-prize">Just won a $500 Amazon Gift Card!</div>
+        </div>
+        <button class="close-winner">&times;</button>
     </div>
 
     <script>
-        // Create background particles
-        const particleBg = document.getElementById('particle-bg');
-        for (let i = 0; i < 60; i++) {
-            const particle = document.createElement('div');
-            particle.classList.add('particle');
+        // Loading animation with progress bar
+        window.addEventListener('load', function() {
+            const loaderWrapper = document.querySelector('.loader-wrapper');
+            const progressBar = document.getElementById('loading-progress');
             
-            // Random position and size
-            const posX = Math.random() * 100;
-            const posY = Math.random() * 100;
-            const size = Math.random() * 4 + 1;
-            const duration = Math.random() * 20 + 10;
-            
-            particle.style.left = `${posX}%`;
-            particle.style.top = `${posY}%`;
-            particle.style.width = `${size}px`;
-            particle.style.height = `${size}px`;
-            particle.style.animationDuration = `${duration}s`;
-            
-            particleBg.appendChild(particle);
-        }
-
-        // GSAP Animations
-        gsap.registerPlugin(ScrollTrigger);
-        
-        // Header scroll effect
-        window.addEventListener('scroll', () => {
-            const header = document.getElementById('header');
-            
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
+            // Simulate progress
+            let progress = 0;
+            const interval = setInterval(() => {
+                progress += Math.random() * 15;
+                if (progress >= 100) {
+                    progress = 100;
+                    clearInterval(interval);
+                    
+                    setTimeout(function() {
+                        loaderWrapper.classList.add('hidden');
+                    }, 500);
+                }
+                progressBar.style.width = progress + '%';
+            }, 200);
         });
+
+        // Close notification bar
+        document.querySelector('.close-notification').addEventListener('click', function() {
+            document.querySelector('.notification-bar').style.display = 'none';
+            document.querySelector('header').style.top = '0';
+            document.querySelector('.hero').style.marginTop = '80px';
+        });
+
+        // Navigation functionality
+        const header = document.getElementById('header');
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        const navItems = document.querySelectorAll('.nav-item');
         
-        // Floating CTA click
-        document.getElementById('floatingCta').addEventListener('click', () => {
-            document.querySelector('#contact').scrollIntoView({
-                behavior: 'smooth'
-            });
+        // Sticky header with scroll effect
+        let lastScrollTop = 0;
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > 50) {
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.remove('header-scrolled');
+            }
+            
+            if (scrollTop > lastScrollTop && scrollTop > 200) {
+                header.classList.add('header-hidden');
+            } else {
+                header.classList.remove('header-hidden');
+            }
+            
+            lastScrollTop = scrollTop;
+            
+            // Show/hide back to top button
+            const backToTop = document.querySelector('.back-to-top');
+            if (scrollTop > 500) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
         });
         
         // Mobile menu toggle
-        const mobileToggle = document.getElementById('mobile-toggle');
-        const navMenu = document.getElementById('nav-menu');
-        
-        mobileToggle.addEventListener('click', () => {
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
             navMenu.classList.toggle('active');
-            mobileToggle.innerHTML = navMenu.classList.contains('active') ? 
-                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
         });
         
-        // Close mobile menu when clicking a link
-        document.querySelectorAll('nav a').forEach(link => {
+        // Close mobile menu when clicking on links
+        document.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
                 navMenu.classList.remove('active');
-                mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                
+                // Handle dropdown toggles on mobile
+                if (window.innerWidth <= 768 && link.nextElementSibling) {
+                    link.nextElementSibling.classList.toggle('show');
+                }
             });
         });
         
-        // Performance chart
-        const ctx = document.getElementById('performanceChart').getContext('2d');
-        const performanceChart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: ['Q1', 'Q2', 'Q3', 'Q4', 'Q5'],
-                datasets: [{
-                    label: 'Conversion Rate %',
-                    data: [70, 85, 92, 78, 95],
-                    backgroundColor: [
-                        'rgba(58, 134, 255, 0.8)',
-                        'rgba(255, 0, 110, 0.8)',
-                        'rgba(255, 190, 11, 0.8)',
-                        'rgba(251, 86, 7, 0.8)',
-                        'rgba(131, 56, 236, 0.8)'
-                    ],
-                    borderColor: [
-                        'rgba(58, 134, 255, 1)',
-                        'rgba(255, 0, 110, 1)',
-                        'rgba(255, 190, 11, 1)',
-                        'rgba(251, 86, 7, 1)',
-                        'rgba(131, 56, 236, 1)'
-                    ],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        max: 100,
-                        grid: {
-                            color: 'rgba(255, 255, 255, 0.1)'
-                        },
-                        ticks: {
-                            color: '#94a3b8'
+        // Countdown timer
+        function updateCountdown() {
+            const days = document.getElementById('days');
+            const hours = document.getElementById('hours');
+            const minutes = document.getElementById('minutes');
+            const seconds = document.getElementById('seconds');
+            
+            let dayVal = parseInt(days.innerText);
+            let hourVal = parseInt(hours.innerText);
+            let minuteVal = parseInt(minutes.innerText);
+            let secondVal = parseInt(seconds.innerText);
+            
+            secondVal--;
+            
+            if (secondVal < 0) {
+                secondVal = 59;
+                minuteVal--;
+                
+                if (minuteVal < 0) {
+                    minuteVal = 59;
+                    hourVal--;
+                    
+                    if (hourVal < 0) {
+                        hourVal = 23;
+                        dayVal--;
+                        
+                        if (dayVal < 0) {
+                            // Timer completed
+                            dayVal = 0;
+                            hourVal = 0;
+                            minuteVal = 0;
+                            secondVal = 0;
+                            return;
                         }
-                    },
-                    x: {
-                        grid: {
-                            display: false
-                        },
-                        ticks: {
-                            color: '#94a3b8'
-                        }
-                    }
-                },
-                plugins: {
-                    legend: {
-                        display: false
-                    },
-                    tooltip: {
-                        backgroundColor: 'rgba(22, 33, 62, 0.9)',
-                        titleColor: '#f0f9ff',
-                        bodyColor: '#94a3b8',
-                        borderColor: 'rgba(255, 255, 255, 0.1)',
-                        borderWidth: 1,
-                        padding: 15,
-                        displayColors: false
                     }
                 }
             }
+            
+            days.innerText = dayVal.toString().padStart(2, '0');
+            hours.innerText = hourVal.toString().padStart(2, '0');
+            minutes.innerText = minuteVal.toString().padStart(2, '0');
+            seconds.innerText = secondVal.toString().padStart(2, '0');
+        }
+        
+        setInterval(updateCountdown, 1000);
+        
+        // Scroll animations for elements
+        function checkScroll() {
+            const offerCards = document.querySelectorAll('.offer-card');
+            const steps = document.querySelectorAll('.step');
+            const triggerBottom = window.innerHeight * 0.8;
+            
+            offerCards.forEach(card => {
+                const cardTop = card.getBoundingClientRect().top;
+                
+                if (cardTop < triggerBottom) {
+                    card.classList.add('visible');
+                }
+            });
+            
+            steps.forEach(step => {
+                const stepTop = step.getBoundingClientRect().top;
+                
+                if (stepTop < triggerBottom) {
+                    step.classList.add('visible');
+                }
+            });
+        }
+        
+        window.addEventListener('scroll', checkScroll);
+        window.addEventListener('load', checkScroll);
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
         });
         
-        // Contact form validation
+        // FAQ accordion functionality
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            
+            question.addEventListener('click', () => {
+                item.classList.toggle('active');
+            });
+        });
+        
+        // Form submission
         const contactForm = document.getElementById('contactForm');
         if (contactForm) {
             contactForm.addEventListener('submit', function(e) {
                 e.preventDefault();
-                let isValid = true;
-                
-                // Reset previous errors
-                const errorElements = document.querySelectorAll('.error-message');
-                errorElements.forEach(el => el.textContent = '');
-                
-                // Validate name
-                const name = document.getElementById('name');
-                if (!name.value.trim()) {
-                    document.getElementById('nameError').textContent = 'Name is required';
-                    isValid = false;
-                }
-                
-                // Validate email
-                const email = document.getElementById('email');
-                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                if (!email.value.trim()) {
-                    document.getElementById('emailError').textContent = 'Email is required';
-                    isValid = false;
-                } else if (!emailPattern.test(email.value)) {
-                    document.getElementById('emailError').textContent = 'Please enter a valid email';
-                    isValid = false;
-                }
-                
-                // Validate company
-                const company = document.getElementById('company');
-                if (!company.value.trim()) {
-                    document.getElementById('companyError').textContent = 'Company is required';
-                    isValid = false;
-                }
-                
-                // Validate message
-                const message = document.getElementById('message');
-                if (!message.value.trim()) {
-                    document.getElementById('messageError').textContent = 'Message is required';
-                    isValid = false;
-                }
-                
-                if (isValid) {
-                    // Form is valid, show success message
-                    alert('Thank you for your inquiry! Our team will contact you shortly.');
-                    contactForm.reset();
-                }
+                alert('Thank you for your message! We will get back to you soon.');
+                this.reset();
             });
         }
         
-        // Floating card animation
-        function floatCards() {
-            gsap.to('.floating-card:nth-child(1)', {
-                duration: 3,
-                y: 20,
-                repeat: -1,
-                yoyo: true,
-                ease: 'sine.inOut'
-            });
-            
-            gsap.to('.floating-card:nth-child(2)', {
-                duration: 3.5,
-                y: 15,
-                rotation: -3,
-                repeat: -1,
-                yoyo: true,
-                ease: 'sine.inOut',
-                delay: 0.2
-            });
-            
-            gsap.to('.floating-card:nth-child(3)', {
-                duration: 3.2,
-                y: 25,
-                rotation: 4,
-                repeat: -1,
-                yoyo: true,
-                ease: 'sine.inOut',
-                delay: 0.4
-            });
-        }
-        
-        floatCards();
-        
-        // Smooth scrolling for navigation
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+        // Newsletter form submission
+        const newsletterForms = document.querySelectorAll('.newsletter-form');
+        newsletterForms.forEach(form => {
+            form.addEventListener('submit', function(e) {
                 e.preventDefault();
-                
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                alert('Thank you for subscribing to our newsletter!');
+                this.reset();
             });
         });
+
+        // Testimonial carousel
+        const testimonials = document.querySelectorAll('.testimonial');
+        const dots = document.querySelectorAll('.testimonial-dot');
+        let currentTestimonial = 0;
+
+        function showTestimonial(index) {
+            testimonials.forEach(testimonial => testimonial.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            testimonials[index].classList.add('active');
+            dots[index].classList.add('active');
+            currentTestimonial = index;
+        }
+
+        dots.forEach(dot => {
+            dot.addEventListener('click', function() {
+                const index = parseInt(this.getAttribute('data-index'));
+                showTestimonial(index);
+            });
+        });
+
+        // Auto-rotate testimonials
+        setInterval(() => {
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            showTestimonial(currentTestimonial);
+        }, 5000);
+
+        // Winner notifications
+        const winnerNotification = document.querySelector('.winner-notification');
+        const closeWinnerBtn = document.querySelector('.close-winner');
         
-        // Initial header state
-        window.dispatchEvent(new Event('scroll'));
+        // Show winner notification after a delay
+        setTimeout(() => {
+            winnerNotification.classList.add('visible');
+        }, 5000);
+        
+        closeWinnerBtn.addEventListener('click', () => {
+            winnerNotification.classList.remove('visible');
+        });
+        
+        // Rotate through different winner notifications
+        const winners = [
+            { name: 'Emily R.', prize: 'Just won a $500 Amazon Gift Card!', avatar: 'https://randomuser.me/api/portraits/women/26.jpg' },
+            { name: 'Michael T.', prize: 'Just won a $250 Walmart Gift Card!', avatar: 'https://randomuser.me/api/portraits/men/32.jpg' },
+            { name: 'Jessica W.', prize: 'Just won a $100 Visa Gift Card!', avatar: 'https://randomuser.me/api/portraits/women/45.jpg' },
+            { name: 'David K.', prize: 'Just won a $300 Target Gift Card!', avatar: 'https://randomuser.me/api/portraits/men/22.jpg' }
+        ];
+        
+        let winnerIndex = 0;
+        setInterval(() => {
+            if (winnerNotification.classList.contains('visible')) {
+                winnerIndex = (winnerIndex + 1) % winners.length;
+                const winner = winners[winnerIndex];
+                
+                document.querySelector('.winner-avatar img').src = winner.avatar;
+                document.querySelector('.winner-avatar img').alt = winner.name;
+                document.querySelector('.winner-name').textContent = winner.name;
+                document.querySelector('.winner-prize').textContent = winner.prize;
+            }
+        }, 8000);
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.hamburger');
+
+        // Exit intent popup
+        // const exitPopup = document.querySelector('.exit-popup');
+        // const closePopupBtn = document.querySelector('.popup-close');
+        // let mouseOutside = false;
+        
+        // document.addEventListener('mouseout', (e) => {
+        //     if (!mouseOutside && e.clientY < 10) {
+        //         mouseOutside = true;
+        //         setTimeout(() => {
+        //             exitPopup.classList.add('visible');
+        //         }, 500);
+        //     }
+        // });
+        
+        // closePopupBtn.addEventListener('click', () => {
+        //     exitPopup.classList.remove('visible');
+        // });
+        
+        // Click outside popup to close
+        // exitPopup.addEventListener('click', (e) => {
+        //     if (e.target === exitPopup) {
+        //         exitPopup.classList.remove('visible');
+        //     }
+        // });
     </script>
 </body>
 </html>
